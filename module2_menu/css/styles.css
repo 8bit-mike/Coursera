@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#title {
+  margin: 30px;
+  font-size: 60px;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+#main-container {
+  display: flex;
+  margin: 20px;
+}
+.food-items {
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+  background-color: grey;
+  position: relative;
+}
+.food-items > h2 {
+  border: 1px solid black;
+  padding: 3px 50px;
+  margin-bottom: 10px;
+  width: fit-content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 40px;
+}
+
+.food-items p {
+  margin-top: 50px;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.2em;
+}
+
+#chicken h2 {
+  background-color: pink;
+}
+
+#beef h2 {
+  background-color: red;
+  color: white;
+}
+
+#sushi h2 {
+  background-color: yellowgreen;
+}
+
+/* display for tablets */
+/*  between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  #main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #sushi {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  #main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
